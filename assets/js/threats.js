@@ -1,15 +1,29 @@
 $(document).ready(function () {
+  // Amenazas comunes
   const threats = [
-    { title: 'Phishing', desc: 'Técnica para engañar al usuario y robar información confidencial.' },
-    { title: 'Ransomware', desc: 'Malware que bloquea el sistema hasta pagar un rescate.' },
-    { title: 'Malware', desc: 'Software malicioso que daña o accede sin permiso a un sistema.' },
-    { title: 'Ataques DDoS', desc: 'Saturación de un servicio para volverlo inaccesible.' }
+    {
+      title: 'Phishing',
+      desc: 'Técnica en la que los atacantes se hacen pasar por entidades legítimas (como bancos o servicios de correo) para engañar al usuario y obtener información personal, como contraseñas o datos bancarios.'
+    },
+    {
+      title: 'Ransomware',
+      desc: 'Tipo de malware que bloquea el acceso al sistema o a archivos del usuario, exigiendo un pago para desbloquearlos. A menudo se propaga por archivos adjuntos infectados o enlaces maliciosos.'
+    },
+    {
+      title: 'Malware',
+      desc: 'Término general para todo software malicioso diseñado para dañar, infiltrarse o robar información de un sistema. Incluye virus, troyanos, spyware y más.'
+    },
+    {
+      title: 'Ataques DDoS',
+      desc: 'Un ataque de denegación de servicio distribuido (DDoS) busca saturar un servidor con tráfico falso desde múltiples fuentes, haciéndolo inaccesible para usuarios legítimos.'
+    }
   ];
 
+  // Insertar tarjetas de amenazas
   threats.forEach((threat) => {
     $('#threats-container').append(`
       <div class="col-md-6 mb-4">
-        <div class="card h-100">
+        <div class="card h-100 shadow-sm border-0">
           <div class="card-body">
             <h5 class="card-title">${threat.title}</h5>
             <p class="card-text">${threat.desc}</p>
@@ -19,11 +33,23 @@ $(document).ready(function () {
     `);
   });
 
+  // Casos reales
   const cases = [
-    { title: 'Caso 1: WannaCry', content: 'En 2017, este ransomware afectó a hospitales y empresas en todo el mundo.' },
-    { title: 'Caso 2: DDoS Dyn', content: 'Un ataque DDoS afectó a grandes sitios como Twitter y Netflix en 2016.' }
+    {
+      title: 'Caso WannaCry (2017)',
+      content: 'WannaCry fue un ransomware que afectó a más de 200,000 equipos en 150 países, incluyendo hospitales, empresas y gobiernos. Bloqueaba el acceso a archivos hasta recibir un pago en Bitcoin.'
+    },
+    {
+      title: 'Ataque DDoS a Dyn (2016)',
+      content: 'Un masivo ataque DDoS contra el proveedor DNS Dyn colapsó servicios como Twitter, Netflix, Spotify y Reddit durante horas. Fue realizado mediante una red de dispositivos IoT infectados.'
+    },
+    {
+      title: 'Phishing a usuarios de Google Docs (2017)',
+      content: 'Un correo falso simulando ser una invitación de Google Docs redirigía a los usuarios a una app maliciosa que obtenía acceso a su cuenta de Google.'
+    }
   ];
 
+  // Insertar acordeón de casos
   cases.forEach((c, index) => {
     $('#casesAccordion').append(`
       <div class="accordion-item">
