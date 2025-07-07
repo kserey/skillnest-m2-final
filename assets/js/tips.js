@@ -35,4 +35,11 @@ $(document).ready(function () {
     $('#result-message')[0].scrollIntoView({ behavior: 'smooth' });
   });
 
+    // RESET TEST ON MODAL CLOSE
+  $('#testModal').on('hidden.bs.modal', function () {
+    $('#quiz-form')[0].reset();
+    $('#result-message').addClass('d-none').text('');
+  });
+
+
 });
