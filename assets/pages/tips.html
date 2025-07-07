@@ -4,54 +4,207 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Consejos | Ciberseguridad</title>
+
+  <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-  <!-- Navbar -->
-    <div id="navbar-placeholder"></div>
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
 
-  <div class="container my-5">
-    <h2>Consejos para Protegerte</h2>
-    <ul id="tips-list" class="list-group mb-4"></ul>
-
-    <!-- Formulario -->
-    <h3>Solicita más información</h3>
-    <form id="contact-form" class="mb-5">
-      <div class="mb-3">
-        <label for="name" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="name" required />
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo</label>
-        <input type="email" class="form-control" id="email" required />
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-
-    <!-- Modal -->
-    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#testModal">Test de Seguridad</button>
-    <div class="modal fade" id="testModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Test de Seguridad</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <!-- TIPS -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Consejos para Protegerte</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">🔐</div>
+              <h6 class="fw-bold">Contraseñas Fuertes</h6>
+              <p class="text-muted small">Usa letras, números y símbolos. No repitas contraseñas.</p>
+            </div>
           </div>
-          <div class="modal-body">
-            <p>¿Qué es el phishing?</p>
-            <button class="btn btn-outline-primary w-100 mb-2">Un tipo de antivirus</button>
-            <button class="btn btn-outline-primary w-100 mb-2 correct">Un intento de engaño para obtener datos</button>
-            <div id="feedback" class="mt-3 text-success d-none">¡Correcto!</div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">🔒</div>
+              <h6 class="fw-bold">Autenticación 2FA</h6>
+              <p class="text-muted small">Activa la verificación en dos pasos en tus cuentas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">🔄</div>
+              <h6 class="fw-bold">Actualiza tu Software</h6>
+              <p class="text-muted small">Evita vulnerabilidades manteniendo todo actualizado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">📧</div>
+              <h6 class="fw-bold">Correos Sospechosos</h6>
+              <p class="text-muted small">No abras correos de fuentes desconocidas o dudosas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">🌐</div>
+              <h6 class="fw-bold">VPN en Wi-Fi Públicas</h6>
+              <p class="text-muted small">Protege tu conexión cuando navegues en redes abiertas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">💾</div>
+              <h6 class="fw-bold">Copias de Seguridad</h6>
+              <p class="text-muted small">Respalda tu información para evitar pérdidas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">❗</div>
+              <h6 class="fw-bold">Evita Estafas</h6>
+              <p class="text-muted small">Desconfía de promociones que parecen irreales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">🔎</div>
+              <h6 class="fw-bold">Privacidad</h6>
+              <p class="text-muted small">Revisa la configuración de tus redes sociales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">👥</div>
+              <h6 class="fw-bold">Educa tu Entorno</h6>
+              <p class="text-muted small">Comparte estos consejos con tu familia y amigos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-2 text-primary mb-3">🛡️</div>
+              <h6 class="fw-bold">Usa Antivirus</h6>
+              <p class="text-muted small">Instala y mantén activo un software de seguridad.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+
+  <!-- SECTION TEST & CONTACT -->
+  <section class="section bg-white">
+    <div class="container py-1">
+      <div class="container my-3">
+        <div class="row g-4">
+
+          <!-- TEST -->
+          <div class="col-md-6">
+            <h3 class="mb-3">Test de Seguridad</h3>
+            <p>Responde las siguientes preguntas para poner a prueba tu conocimiento en ciberseguridad:</p>
+            <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#testModal">Comenzar Test</button>
+
+            <!-- TEST MODAL -->
+            <div class="modal fade" id="testModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Test de Seguridad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="quiz-form">
+                      <div class="mb-3">
+                        <p>1. ¿Qué es el phishing?</p>
+                        <div>
+                          <input type="radio" name="q1" value="false"> Un tipo de antivirus<br>
+                          <input type="radio" name="q1" value="true"> Un intento de engaño para obtener datos<br>
+                          <input type="radio" name="q1" value="false"> Una herramienta de ciberseguridad
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <p>2. ¿Cuál es una práctica segura al crear contraseñas?</p>
+                        <div>
+                          <input type="radio" name="q2" value="false"> Usar la misma para todo<br>
+                          <input type="radio" name="q2" value="true"> Crear contraseñas únicas y largas<br>
+                          <input type="radio" name="q2" value="false"> Usar fechas de cumpleaños
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <p>3. ¿Qué hace un antivirus?</p>
+                        <div>
+                          <input type="radio" name="q3" value="true"> Detecta y elimina software malicioso<br>
+                          <input type="radio" name="q3" value="false"> Mejora la velocidad de internet<br>
+                          <input type="radio" name="q3" value="false"> Abre archivos comprimidos
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary mt-3">Enviar respuestas</button>
+                      <div id="result-message" class="mt-4 text-success d-none"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM -->
+          <div class="col-md-6">
+            <h3 class="mb-3">Solicita más información</h3>
+            <form id="contact-form">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JQUERY -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+  <!-- BOOTSTRAP -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS -->
   <script src="../js/navbar.js"></script>
   <script src="../js/tips.js"></script>
+  <script src="../js/footer.js"></script>
+
 </body>
 </html>
