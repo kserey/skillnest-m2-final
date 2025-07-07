@@ -6,6 +6,8 @@ main p {
   line-height: 1.6;
 }
 
+/* INDEX PAGE */
+
 .col-lg-4 {
   overflow: visible;
 }
@@ -29,4 +31,45 @@ main p {
 .accordion-button:not(.collapsed) {
   background-color: #0d6efd;
   color: white;
+}
+
+/* THREATS PAGE*/
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card-body {
+  cursor: pointer;
+}
+
+.card-img-top.small-img {
+  height: 120px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.threat-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+}
+
+.threat-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }

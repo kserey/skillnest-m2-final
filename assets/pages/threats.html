@@ -4,30 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amenazas | Ciberseguridad</title>
+
+  <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body>
-  <!-- Navbar -->
-    <div id="navbar-placeholder"></div>
-
-    <div class="container my-5">
-        <h2 class="mb-4">Amenazas Comunes</h2>
-        <p class="mb-5">
-          Las amenazas cibernéticas son técnicas maliciosas utilizadas para acceder, dañar o robar información sin autorización. Conocerlas es el primer paso para protegerse. A continuación te presentamos las más comunes, cómo funcionan y cómo evitarlas.
-        </p>
-
-        <div id="threats-container" class="row"></div>
-
-        <h3 class="mt-5">Casos Reales</h3>
-        <div class="accordion" id="casesAccordion">
-        <!-- se llena por JS -->
-        </div>
+  <!-- NAVBAR -->
+    <div id="navbar-placeholder">
     </div>
 
+    <div class="container my-5">
+      <h2 class="mb-4">Amenazas Comunes</h2>
+      <p class="mb-5">
+        Las amenazas cibernéticas son técnicas maliciosas utilizadas para acceder, dañar o robar información sin autorización. Conocerlas es el primer paso para protegerse. A continuación te presentamos las más comunes, cómo funcionan y cómo evitarlas.
+      </p>
+
+      <!-- THREATS CARDS -->
+      <div id="threats-container" class="row">
+      </div>
+
+      <h3 class="mt-5">Casos Reales</h3>
+
+      <!-- REAL CASES ACCORDION -->
+      <div class="accordion" id="casesAccordion">
+      </div>
+
+    </div>
+
+    <!-- THEATS MODAL -->
+    <div class="modal fade" id="threatModal" tabindex="-1" aria-labelledby="threatModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header">
+            <h5 class="modal-title" id="threatModalLabel">Título</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="threatModalBody">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+    
+
+    <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS --> 
     <script src="../js/navbar.js"></script>
     <script src="../js/threats.js"></script>
+    <script src="../js/footer.js"></script>
+
 </body>
 </html>

@@ -1,55 +1,72 @@
 $(document).ready(function () {
-  // Amenazas comunes
+  // THREATS DATA
   const threats = [
     {
       title: 'Phishing',
-      desc: 'Técnica en la que los atacantes se hacen pasar por entidades legítimas (como bancos o servicios de correo) para engañar al usuario y obtener información personal, como contraseñas o datos bancarios.'
+      desc: 'Técnica en la que los atacantes se hacen pasar por entidades legítimas (como bancos o servicios de correo) para engañar al usuario y obtener información personal.',
+      img: '../img/phishing.webp'
     },
     {
       title: 'Ransomware',
-      desc: 'Tipo de malware que bloquea el acceso al sistema o a archivos del usuario, exigiendo un pago para desbloquearlos. A menudo se propaga por archivos adjuntos infectados o enlaces maliciosos.'
+      desc: 'Malware que bloquea el acceso al sistema o archivos del usuario, exigiendo un pago para desbloquearlos.',
+      img: '../img/ransomware.jpg'
     },
     {
       title: 'Malware',
-      desc: 'Término general para todo software malicioso diseñado para dañar, infiltrarse o robar información de un sistema. Incluye virus, troyanos, spyware y más.'
+      desc: 'Software malicioso diseñado para dañar, infiltrarse o robar información de un sistema.',
+      img: '../img/malware.png'
     },
     {
       title: 'Ataques DDoS',
-      desc: 'Un ataque de denegación de servicio distribuido (DDoS) busca saturar un servidor con tráfico falso desde múltiples fuentes, haciéndolo inaccesible para usuarios legítimos.'
+      desc: 'Un ataque DDoS busca saturar un servidor con tráfico falso desde múltiples fuentes, haciéndolo inaccesible.',
+      img: '../img/ddos.png'
     }
   ];
 
-  // Insertar tarjetas de amenazas
-  threats.forEach((threat) => {
+  // INIT THREATS CARDS
+  threats.forEach((threat, index) => {
     $('#threats-container').append(`
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body">
+      <div class="col-lg-3 col-md-6 col-12 mb-4">
+        <div class="card h-100 shadow-sm border-0 threat-card" 
+             data-title="${threat.title}" 
+             data-desc="${threat.desc}" 
+             data-bs-toggle="modal" 
+             data-bs-target="#threatModal">
+          <img src="${threat.img}" class="card-img-top" alt="${threat.title}">
+          <div class="card-body text-center">
             <h5 class="card-title">${threat.title}</h5>
-            <p class="card-text">${threat.desc}</p>
           </div>
         </div>
       </div>
     `);
   });
 
-  // Casos reales
+  // MODAL EVENT
+  $('#threats-container').on('click', '.threat-card', function () {
+    const title = $(this).data('title');
+    const desc = $(this).data('desc');
+
+    $('#threatModalLabel').text(title);
+    $('#threatModalBody').text(desc);
+  });
+
+  // REAL CASES DATA
   const cases = [
     {
       title: 'Caso WannaCry (2017)',
-      content: 'WannaCry fue un ransomware que afectó a más de 200,000 equipos en 150 países, incluyendo hospitales, empresas y gobiernos. Bloqueaba el acceso a archivos hasta recibir un pago en Bitcoin.'
+      content: 'WannaCry afectó a más de 200,000 equipos en 150 países, bloqueando el acceso a archivos hasta recibir un pago en Bitcoin.'
     },
     {
       title: 'Ataque DDoS a Dyn (2016)',
-      content: 'Un masivo ataque DDoS contra el proveedor DNS Dyn colapsó servicios como Twitter, Netflix, Spotify y Reddit durante horas. Fue realizado mediante una red de dispositivos IoT infectados.'
+      content: 'Este ataque colapsó servicios como Twitter, Netflix, Spotify y Reddit durante horas.'
     },
     {
       title: 'Phishing a usuarios de Google Docs (2017)',
-      content: 'Un correo falso simulando ser una invitación de Google Docs redirigía a los usuarios a una app maliciosa que obtenía acceso a su cuenta de Google.'
+      content: 'Un correo falso redirigía a los usuarios a una app maliciosa que accedía a su cuenta de Google.'
     }
   ];
 
-  // Insertar acordeón de casos
+  // INIT REAL CASES ACCORDION
   cases.forEach((c, index) => {
     $('#casesAccordion').append(`
       <div class="accordion-item">
